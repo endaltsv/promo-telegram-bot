@@ -8,13 +8,12 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message
 
-from bot.admin.keyboards.admin_keyboards import admin_menu_back_button
-from bot.admin.keyboards.category_keyboards import create_category_keyboard
+from bot.keyboards.admin import admin_menu_back_button, create_category_keyboard
 from bot.admin.admin_menu import admin_menu
 from bot.config import bot, form_router
 from bot.database.operations.category_operations import add_category
 from bot.database.operations.user_operations import get_user_by_id
-from bot.translations.locale import message_data
+from bot.locales.message_translations import message_data
 
 
 # pylint: disable=too-few-public-methods

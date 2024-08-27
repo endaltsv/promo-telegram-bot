@@ -3,10 +3,10 @@ This module contains a function to
 edit the admin menu message with the
 provided `extra_text` appended.
 """
-from bot.admin.keyboards.admin_keyboards import admin_menu_keyboard
+from bot.keyboards.admin import admin_menu_keyboard
 from bot.config import bot
 from bot.database.operations.user_operations import get_user_by_id
-from bot.translations.locale import message_data
+from bot.locales.message_translations import message_data
 
 
 async def admin_menu(chat_id, message_id, extra_text=''):

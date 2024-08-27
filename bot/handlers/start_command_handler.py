@@ -4,8 +4,8 @@ from aiogram.types import Message
 from bot.config import router, bot
 from bot.database.operations.setting_operations import get_settings
 from bot.database.operations.user_operations import get_user_by_id
-from bot.translations.locale import message_data
-from bot.user.keyboards.keyboard_start import keyboard_start
+from bot.locales.message_translations import message_data
+from bot.keyboards.user import keyboard_start
 
 
 @router.message(CommandStart())

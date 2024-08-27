@@ -5,8 +5,8 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from dotenv import load_dotenv
 
-from bot.user.middlewares.delete_message import DeleteMessageMiddleware
-from bot.user.middlewares.update_user import UserUpdateMiddleware
+from bot.middlewares.delete_message import DeleteMessageMiddleware
+from bot.middlewares.update_user import UserUpdateMiddleware
 
 
 load_dotenv()

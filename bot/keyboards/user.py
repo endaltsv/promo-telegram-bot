@@ -1,7 +1,32 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from bot.database.operations.category_operations import get_all_categories
-from bot.translations.locale import message_data
+from bot.locales.message_translations import message_data
+
+
+async def answer_keyboard(user):
+    """
+    Creates an inline keyboard with an "Answer" button.
+
+    :return: InlineKeyboardMarkup: An inline keyboard markup with an "Answer" button.
+    """
+    builder = InlineKeyboardBuilder()
+    builder.button(text=message_data['answer'][user.language], callback_data=f"answer|{user.user_id}")
+
+    return builder.as_markup()
+
+
+async def keyboard_back_menu(language='ru'):
+    """
+    Creates an inline keyboard with a "Back" button.
+
+    :param language: The language code for the button text (default is 'ru').
+    :return: InlineKeyboardMarkup: An inline keyboard markup with a "Back" button.
+    """
+    builder = InlineKeyboardBuilder()
+    builder.button(text=message_data['back_menu'][language], callback_data="back_menu")
+
+    return builder.as_markup()
 
 
 async def keyboard_start(language, is_admin):

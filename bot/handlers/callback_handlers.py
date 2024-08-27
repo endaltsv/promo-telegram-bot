@@ -10,9 +10,9 @@ from bot.admin.scenes.admin_user_response import initiate_admin_response
 from bot.admin.scenes.support_id_management import initiate_support_id_update
 from bot.config import router
 from bot.database.operations.user_operations import update_language_by_user_id
-from bot.handlers.start import start
+from bot.handlers.start_command_handler import start
 from bot.user.scenes.send_message_to_support import enter_message_text_to_support
-from bot.user.view.show_details import show_text_by_category
+from bot.user.utils.show_details import show_text_by_category
 
 
 @router.callback_query()

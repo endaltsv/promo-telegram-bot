@@ -12,10 +12,10 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import Message
 
 from bot.admin.admin_utils import end_admin_function
-from bot.admin.keyboards.admin_keyboards import admin_menu_back_button
+from bot.keyboards.admin import admin_menu_back_button
 from bot.config import bot, form_router
 from bot.database.operations.user_operations import get_user_by_id, get_all_users
-from bot.translations.locale import message_data
+from bot.locales.message_translations import message_data
 
 
 class MassMessageForm(StatesGroup):

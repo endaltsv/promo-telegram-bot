@@ -7,7 +7,7 @@ from bot.config import bot
 from bot.database.operations.category_operations import delete_category_by_id
 from bot.database.operations.setting_operations import update_support_id, update_welcome_text
 from bot.database.operations.user_operations import get_all_users, get_user_by_id
-from bot.translations.locale import message_data
+from bot.locales.message_translations import message_data
 
 AdminFunction = Callable[[str], Any]
 

@@ -5,10 +5,9 @@ from aiogram.types import Message
 from bot.config import bot, support_router
 from bot.database.operations.setting_operations import get_settings
 from bot.database.operations.user_operations import get_user_by_id
-from bot.handlers.start import start
-from bot.translations.locale import message_data
-from bot.user.keyboards.answer_keyboard import answer_keyboard
-from bot.user.keyboards.keyboard_back_to_menu import keyboard_back_menu
+from bot.handlers.start_command_handler import start
+from bot.locales.message_translations import message_data
+from bot.keyboards.user import answer_keyboard, keyboard_back_menu
 
 
 class Support(StatesGroup):

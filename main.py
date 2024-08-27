@@ -9,8 +9,8 @@ from bot.admin.scenes.support_id_management import process_and_apply_support_id
 from bot.config import dp, bot
 from bot.database.operations.category_operations import insert_initial_data
 from bot.database.database_config import initialize_database
-from bot.handlers.callbacks import callback_handler
-from bot.handlers.start import command_start_handler
+from bot.handlers.callback_handlers import callback_handler
+from bot.handlers.start_command_handler import command_start_handler
 
 
 async def main() -> None:

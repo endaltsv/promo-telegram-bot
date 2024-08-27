@@ -8,13 +8,12 @@ delete a selected category,
 and update the admin menu accordingly.
 """
 from bot.admin.admin_utils import end_admin_function
-from bot.admin.keyboards.admin_keyboards import admin_menu_back_button
-from bot.admin.keyboards.category_keyboards import create_categories_list_keyboard
+from bot.keyboards.admin import admin_menu_back_button, create_categories_list_keyboard
 from bot.admin.admin_menu import admin_menu
 from bot.config import bot
 from bot.database.operations.category_operations import delete_category_by_id
 from bot.database.operations.user_operations import get_user_by_id
-from bot.translations.locale import message_data
+from bot.locales.message_translations import message_data
 
 
 async def display_deletable_categories(chat_id, message_id):
